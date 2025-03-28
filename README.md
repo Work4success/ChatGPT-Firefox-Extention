@@ -1,26 +1,81 @@
-# ChatGPT-Firefox-Extention
-This sidebar-extention will give to you a peace of mind, knowing that you can review the source before installing it.
+# ChatGPT Sidebar for Firefox
 
-Simple and lightweight. Here is a Firefox browser extension that embeds ChatGPT into a browser sidebar panel using the OpenAI API. It is designed as a personal learning tool and a demonstration of how to integrate ChatGPT into a Firefox extension without relying on third-party services or extensions.
-
----
-
-## Features
-
-- Sidebar interface to interact with ChatGPT using your own API key
-- Lightweight and privacy-respecting
-- Designed to run entirely within the browser
-- Ideal for developers, learners, and tinkerers
+A privacy-focused Firefox extension that provides a ChatGPT interface directly from your browser's sidebar using the OpenAI API.
 
 ---
 
-## Installation Instructions
+## ✨ Features
 
-### 1. Clone the Repository
+- Clean, simple sidebar UI
+- Sends input directly to the ChatGPT API
+- Receives and displays responses
+- Easy to customize and expand
 
-Open a terminal and navigate to your development folder:
+---
+
+## 🧑‍💻 Installation Instructions (Kubuntu/Linux)
+
+### 1. 📂 Clone the Repository
+
+Open a terminal and run:
 
 ```bash
 mkdir -p ~/dev
 cd ~/dev
 git clone https://github.com/YOUR_USERNAME/firefox-chatgpt-sidebar.git
+cd firefox-chatgpt-sidebar
+```
+
+> Replace `YOUR_USERNAME` with your actual GitHub username if you fork this repo.
+
+---
+
+### 2. 🧪 Load the Extension in Firefox
+
+1. Open Firefox and navigate to:
+   ```
+   about:debugging#/runtime/this-firefox
+   ```
+
+2. Click **"Load Temporary Add-on"**.
+
+3. Select the `manifest.json` file inside your cloned folder:
+   ```
+   ~/dev/firefox-chatgpt-sidebar/manifest.json
+   ```
+
+4. Open the sidebar via **View > Sidebar > ChatGPT**.
+
+---
+
+### 3. 🔑 Add Your OpenAI API Key
+
+In `sidebar.js`, find this line:
+
+```javascript
+const apiKey = "YOUR_OPENAI_API_KEY";
+```
+
+Replace it with your actual key from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys).
+
+---
+
+## 🛠 Future Plans
+
+- Configurable API key via options page
+- Message history and context memory
+- Dark mode
+- Support for multiple models and temperature settings
+
+---
+
+## 🛡️ License
+
+This project is licensed under the **Mozilla Public License Version 2.0**.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this project, improve it, and submit a pull request!
