@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "ChatGPT Sidebar",
+  "version": "1.0",
+  "description": "A privacy-respecting ChatGPT sidebar for Firefox.",
+  "permissions": ["storage", "activeTab"],
+  "sidebar_action": {
+    "default_title": "ChatGPT",
+    "default_icon": {
+      "48": "icons/icon.png"
+    },
+    "default_panel": "sidebar.html"
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
